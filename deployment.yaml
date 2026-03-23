@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecom-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ecom
+  template:
+    metadata:
+      labels:
+        app: ecom
+    spec:
+      containers:
+      - name: ecom
+        image: 649966626274.dkr.ecr.us-east-1.amazonaws.com/ecom-app:latest
+        ports:
+        - containerPort: 3001
