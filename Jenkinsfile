@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Princepodwalverma/deploy-ecom.git'
+                git branch: 'main', url: 'https://github.com/Princepodwalverma/deploy-ecom.git'
             }
         }
 
